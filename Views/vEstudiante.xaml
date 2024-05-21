@@ -20,16 +20,16 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
+                      <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Text="Codigo" FontAttributes="Bold" BackgroundColor="Gray" />
-                <Label Grid.Column="1" Text="Nombre" FontAttributes="Bold" BackgroundColor="Gray" />
-                <Label Grid.Column="2" Text="Apellido" FontAttributes="Bold" BackgroundColor="Gray" />
-                <Label Grid.Column="3" Text="Edad" FontAttributes="Bold" BackgroundColor="Gray" />
+                <Label Grid.Column="0" Text="Codigo" FontAttributes="Bold" BackgroundColor="Gray" TextColor="Red"/>
+                <Label Grid.Column="1" Text="Nombre" FontAttributes="Bold" BackgroundColor="Gray" TextColor="Red"/>
+                <Label Grid.Column="2" Text="Apellido" FontAttributes="Bold" BackgroundColor="Gray" TextColor="Red"/>
+                <Label Grid.Column="3" Text="Edad" FontAttributes="Bold" BackgroundColor="Gray" TextColor="Red"/>
             </Grid>
 <!--lista-->
-            <ListView x:Name="listEstudiante" Grid.Row="1" >
+            <ListView x:Name="listEstudiante" Grid.Row="1" ItemSelected="listEstudiante_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -50,6 +50,11 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+           
         </Grid>
+        <Button x:Name="btnAgrgar"
+         Text="Agregar Estudiante"
+         Clicked="btnAgrgar_Clicked"></Button>
     </VerticalStackLayout>
 </ContentPage>
